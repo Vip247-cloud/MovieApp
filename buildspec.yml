@@ -12,6 +12,7 @@ phases:
       - pwd
       - ls
       - python manage.py collectstatic --no-input
+      - python manage.py migrate
       - zip -r MovieApp.zip . -x "*.git*" "*__pycache__*" "*.pyc" "*.pyo" "env/*"
 artifacts:
   files:
