@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.11
+    commands:
+      - pip install -r requirements.txt
+  build:
+    commands:
+      - python manage.py collectstatic --no-input
+      - zip -r MovieApp.zip . -x "*.git*" "*__pycache__*" "*.pyc" "*.pyo" "env/*"
+artifacts:
+  files:
+    - MovieApp.zip
+  discard-paths: yes
