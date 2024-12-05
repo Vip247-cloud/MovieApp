@@ -15,6 +15,5 @@ phases:
       - zip -r MovieApp.zip . -x "*.git*" "*__pycache__*" "*.pyc" "*.pyo" "env/*"
 artifacts:
   files:
-    - "*"
-    - "./*"
-  discard-paths: yes
+    - "**/*"
+  discard-paths: no
