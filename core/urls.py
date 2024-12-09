@@ -14,24 +14,28 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path, include
 
 from django.conf import settings
 from django.conf.urls.static import static
-
-#sitemap
-from django.contrib import sitemaps
+# sitemap
+from django.contrib import admin, sitemaps
 from django.contrib.sitemaps.views import sitemap
+from django.urls import include, path
+
 from core.sitemaps import GenreSitemap, MovieSitemap
 
 sitemaps = {
-    'categories': GenreSitemap,
-    'movies': MovieSitemap,
+    "categories": GenreSitemap,
+    "movies": MovieSitemap,
 }
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path("", include('movie_app.urls')),
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
-]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    path("admin/", admin.site.urls),
+    path("", include("movie_app.urls")),
+    path(
+        "sitemap.xml",
+        sitemap,
+        {"sitemaps": sitemaps},
+        name="django.contrib.sitemaps.views.sitemap",
+    ),
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

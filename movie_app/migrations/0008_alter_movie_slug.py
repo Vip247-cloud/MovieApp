@@ -8,13 +8,18 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('movie_app', '0007_remove_comments_comment_genre_slug_movie_slug_and_more'),
+        ("movie_app", "0007_remove_comments_comment_genre_slug_movie_slug_and_more"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='movie',
-            name='slug',
-            field=autoslug.fields.AutoSlugField(editable=False, populate_from='title', slugify=slugify.slugify, unique=True),
+            model_name="movie",
+            name="slug",
+            field=autoslug.fields.AutoSlugField(
+                editable=False,
+                populate_from="title",
+                slugify=slugify.slugify,
+                unique=True,
+            ),
         ),
     ]

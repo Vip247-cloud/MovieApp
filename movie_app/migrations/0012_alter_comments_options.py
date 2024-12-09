@@ -6,12 +6,12 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('movie_app', '0011_alter_movie_options'),
+        ("movie_app", "0011_alter_movie_options"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='comments',
-            options={'ordering': ('-created_at',)},
+            name="comments",
+            options={"ordering": ("-created_at",)},
         ),
     ]

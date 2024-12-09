@@ -6,13 +6,15 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('movie_app', '0012_alter_comments_options'),
+        ("movie_app", "0012_alter_comments_options"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='profile',
-            name='avatar',
-            field=models.ImageField(default='default-avatar/default-avatar.webp', upload_to='user-avatars/'),
+            model_name="profile",
+            name="avatar",
+            field=models.ImageField(
+                default="default-avatar/default-avatar.webp", upload_to="user-avatars/"
+            ),
         ),
     ]

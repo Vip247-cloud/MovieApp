@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('movie_app', '0004_movie_language'),
+        ("movie_app", "0004_movie_language"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='movie',
-            name='vote_average',
+            model_name="movie",
+            name="vote_average",
             field=models.FloatField(blank=True, null=True),
         ),
     ]

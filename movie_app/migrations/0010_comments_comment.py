@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('movie_app', '0009_alter_genre_slug_alter_profile_slug'),
+        ("movie_app", "0009_alter_genre_slug_alter_profile_slug"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='comments',
-            name='comment',
+            model_name="comments",
+            name="comment",
             field=models.TextField(blank=True, null=True),
         ),
     ]

@@ -1,6 +1,6 @@
 from django.contrib.sitemaps import Sitemap
 
-from movie_app.models import Movie,Genre
+from movie_app.models import Genre, Movie
 
 
 class GenreSitemap(Sitemap):
@@ -9,7 +9,7 @@ class GenreSitemap(Sitemap):
 
     def location(self, obj):
         return obj.get_absolute_url()
-    
+
 
 class MovieSitemap(Sitemap):
     def items(self):

@@ -8,18 +8,28 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('movie_app', '0008_alter_movie_slug'),
+        ("movie_app", "0008_alter_movie_slug"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='genre',
-            name='slug',
-            field=autoslug.fields.AutoSlugField(editable=False, populate_from='title', slugify=slugify.slugify, unique=True),
+            model_name="genre",
+            name="slug",
+            field=autoslug.fields.AutoSlugField(
+                editable=False,
+                populate_from="title",
+                slugify=slugify.slugify,
+                unique=True,
+            ),
         ),
         migrations.AlterField(
-            model_name='profile',
-            name='slug',
-            field=autoslug.fields.AutoSlugField(editable=False, populate_from='get_full_name', slugify=slugify.slugify, unique=True),
+            model_name="profile",
+            name="slug",
+            field=autoslug.fields.AutoSlugField(
+                editable=False,
+                populate_from="get_full_name",
+                slugify=slugify.slugify,
+                unique=True,
+            ),
         ),
     ]

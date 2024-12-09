@@ -6,22 +6,22 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('movie_app', '0019_alter_profile_instagram_alter_profile_twitter_and_more'),
+        ("movie_app", "0019_alter_profile_instagram_alter_profile_twitter_and_more"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='profile',
-            name='website',
+            model_name="profile",
+            name="website",
         ),
         migrations.AlterField(
-            model_name='profile',
-            name='instagram',
+            model_name="profile",
+            name="instagram",
             field=models.CharField(blank=True, max_length=1024, null=True),
         ),
         migrations.AlterField(
-            model_name='profile',
-            name='twitter',
+            model_name="profile",
+            name="twitter",
             field=models.CharField(blank=True, max_length=1024, null=True),
         ),
     ]

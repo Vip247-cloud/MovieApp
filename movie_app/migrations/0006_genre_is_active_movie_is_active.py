@@ -6,18 +6,18 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('movie_app', '0005_movie_vote_average'),
+        ("movie_app", "0005_movie_vote_average"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='genre',
-            name='is_active',
+            model_name="genre",
+            name="is_active",
             field=models.BooleanField(default=True),
         ),
         migrations.AddField(
-            model_name='movie',
-            name='is_active',
+            model_name="movie",
+            name="is_active",
             field=models.BooleanField(default=True),
         ),
     ]

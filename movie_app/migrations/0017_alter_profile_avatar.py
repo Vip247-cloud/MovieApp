@@ -6,13 +6,15 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('movie_app', '0016_alter_profile_slug'),
+        ("movie_app", "0016_alter_profile_slug"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='profile',
-            name='avatar',
-            field=models.ImageField(default='default-avatar/default-avatar.webp', upload_to='user-avatars/'),
+            model_name="profile",
+            name="avatar",
+            field=models.ImageField(
+                default="default-avatar/default-avatar.webp", upload_to="user-avatars/"
+            ),
         ),
     ]

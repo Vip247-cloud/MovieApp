@@ -1,15 +1,19 @@
 from django.contrib import admin
-from .models import Movie, Genre,Profile
+
+from .models import Genre, Movie, Profile
 
 # Register your models here.
 
+
 @admin.register(Movie)
 class MovieAdmin(admin.ModelAdmin):
-    list_display = ['title', "release_date", 'movie_id']
+    list_display = ["title", "release_date", "movie_id"]
+
 
 @admin.register(Genre)
 class GenreAdmin(admin.ModelAdmin):
-    list_display = ['title']
+    list_display = ["title"]
+
 
 @admin.register(Profile)
 class ProfileAdmin(admin.ModelAdmin):
